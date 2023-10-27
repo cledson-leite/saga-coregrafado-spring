@@ -1,6 +1,6 @@
-package com.saga.coreografado.inventoryservice.config.kafka;
+package com.saga.coreografado.saleservice.config.kafka;
 
-import com.saga.coreografado.inventoryservice.adapters.output.message.SaleMessage;
+import com.saga.coreografado.saleservice.adapters.output.message.SaleMessage;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
 package com.saga.coreografado.paymentservice.config.usecase;
 
 import com.saga.coreografado.paymentservice.adapter.output.SavePaymentAdapter;
-import com.saga.coreografado.paymentservice.adapter.output.SendValidatedPaymentAdapter;
+import com.saga.coreografado.paymentservice.adapter.output.SendToKafkaAdapter;
 import com.saga.coreografado.paymentservice.adapter.output.UpdateUserAdapter;
 import com.saga.coreografado.paymentservice.application.core.usecase.FindUserByIdUseCase;
 import com.saga.coreografado.paymentservice.application.core.usecase.SalePaymentUseCase;
@@ -15,13 +15,13 @@ public class SalePaymentConfig {
             FindUserByIdUseCase findUserByIdUseCase,
             UpdateUserAdapter updateUserAdapter,
             SavePaymentAdapter savePaymentAdapter,
-            SendValidatedPaymentAdapter sendValidatedPaymentAdapter
+            SendToKafkaAdapter sendToKafkaAdapter
     ){
         return new SalePaymentUseCase(
                 findUserByIdUseCase,
                 updateUserAdapter,
                 savePaymentAdapter,
-                sendValidatedPaymentAdapter
+                sendToKafkaAdapter
         );
     }
 }

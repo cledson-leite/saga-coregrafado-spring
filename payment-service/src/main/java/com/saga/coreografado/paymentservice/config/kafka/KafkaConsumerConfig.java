@@ -24,7 +24,7 @@ public class KafkaConsumerConfig {
     public ConsumerFactory<String, SaleMessage> consumerFactory(){
         Map<String, Object> props = new HashMap<>();
         props.put(BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(AUTO_OFFSET_RESET_CONFIG, "payment");
+        props.put(AUTO_OFFSET_RESET_CONFIG, "earliest");
         props.put(KEY_SERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(VALUE_SERIALIZER_CLASS_CONFIG, CustomDeserializer.class);
         return new DefaultKafkaConsumerFactory<>(props);
