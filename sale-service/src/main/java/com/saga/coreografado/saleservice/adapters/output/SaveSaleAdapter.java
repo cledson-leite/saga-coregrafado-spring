@@ -6,7 +6,9 @@ import com.saga.coreografado.saleservice.adapters.output.repository.mapper.SaleE
 import com.saga.coreografado.saleservice.application.core.domain.Sale;
 import com.saga.coreografado.saleservice.application.ports.output.SaveSaleOutput;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SaveSaleAdapter implements SaveSaleOutput {
     @Autowired
     private SaleRepository saleRepository;
