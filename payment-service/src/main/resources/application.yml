@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/saga_sale
+    url: jdbc:postgresql://localhost:5432/saga_payment
     username: postgres
     password: postgres
 
